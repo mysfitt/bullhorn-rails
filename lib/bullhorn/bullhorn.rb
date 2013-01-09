@@ -5,6 +5,9 @@ require 'net/https'
 require 'bullhorn/util'
 require 'bullhorn/client'
 require 'bullhorn/categories'
+require 'bullhorn/jobs'
+require 'bullhorn/files'
+require 'bullhorn/candidates'
 
 module Bullhorn
 
