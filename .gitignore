@@ -30,6 +30,9 @@ pkg
 #
 #.DS_Store
 
+# For Aptana
+.project
+
 # For TextMate
 #*.tmproj
 #tmtags
@@ -43,7 +46,7 @@ pkg
 #.\#*
 
 # For vim:
-#*.swp
+*.swp
 
 # For redcar:
 #.redcar
