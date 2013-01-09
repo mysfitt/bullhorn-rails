@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bullhorn-rails"
   gem.homepage = "http://github.com/jthorsen/bullhorn-rails"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Bullhorn API Gem}
+  gem.description = %Q{Bullhorn API gem for a rails environment}
   gem.email = "jdt@mind.net"
   gem.authors = ["Jack Thorsen"]
   # dependencies defined in Gemfile
