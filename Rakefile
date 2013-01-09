@@ -40,7 +40,7 @@ task :default => :spec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  version = File.exist?('VERSION') ? File.read('VERSION') : "0.1.0"
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "bullhorn-rails #{version}"
