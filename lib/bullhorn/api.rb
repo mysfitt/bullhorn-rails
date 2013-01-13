@@ -9,7 +9,7 @@ module Bullhorn
   ###------------ Create Bullhorn Core Operation Methods
   #               and Attribute Accessors
     {                                                             #request structure      
-      :find =>                                                      #operation
+      :find => {                                                    #operation
         :entityName => "Candidate",                                   #attribute
         :id => nil,                                                   #attribute
         :attributes! => {:id => {"xsi:type" => "xsd:int"}}            #attribute types
