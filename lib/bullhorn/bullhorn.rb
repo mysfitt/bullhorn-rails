@@ -8,6 +8,7 @@ require 'bullhorn/categories'
 require 'bullhorn/jobs'
 require 'bullhorn/files'
 require 'bullhorn/candidates'
+require 'bullhorn/api'
 
 module Bullhorn
 
