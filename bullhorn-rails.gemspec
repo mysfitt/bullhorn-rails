@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jack Thorsen"]
-  s.date = "2013-01-09"
+  s.authors = ["Jack Thorsen", "Joseph Reeves"]
+  s.date = "2013-04-11"
   s.description = "Bullhorn API gem for a rails environment"
   s.email = "jdt@mind.net"
   s.extra_rdoc_files = [
@@ -37,6 +37,7 @@ Gem::Specification.new do |s|
     "lib/bullhorn/client.rb",
     "lib/bullhorn/files.rb",
     "lib/bullhorn/jobs.rb",
+    "lib/bullhorn/jobsubmission.rb",
     "lib/bullhorn/rails.rb",
     "lib/bullhorn/util.rb",
     "spec/bullhorn-rails_spec.rb",

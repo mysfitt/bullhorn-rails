@@ -3,14 +3,6 @@ module Bullhorn
   class Candidates
 
     class << self
-    
-      
-      ###--------------So I can set credentials from console
-      def credentials
-           Bullhorn::Client.username = '525.resumes'
-           Bullhorn::Client.password = 'scrub04k'
-           Bullhorn::Client.apiKey   = '943C63E3-FB1A-4089-A3813849B9626393'  
-      end
 
       ###---------------- Find a Candidate by Id
       def find_by id

@@ -49,7 +49,7 @@ module Bullhorn
       protected
 
       def open_approved_job_id_request 
-        { :query => { :entityName => "JobOrder", :where => "isOpen=1 AND isPublic=1 AND (status='Accepting Candidates' OR status='Website Only')"} }
+        { :query => { :entityName => "JobOrder", :where => "isOpen=true AND isPublic=1 AND (status='Accepting Candidates' OR status='Website Only')"} }
       end
       
       def get_category_ids_from_job_ids job_ids
