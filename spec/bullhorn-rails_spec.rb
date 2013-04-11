@@ -21,7 +21,7 @@ describe "BullhornRails" do
     bh.apiKey   = '943C63E3-FB1A-4089-A3813849B9626393'
     puts bh.find(:id => 114755)
     puts bh.post.inspect[0..10000]
-    puts bh.connection
+    puts bh.inspect
     puts
   end
 end

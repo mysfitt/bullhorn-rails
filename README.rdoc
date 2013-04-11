@@ -1,6 +1,6 @@
 = bullhorn-rails
 
-Description goes here.
+A ruby gem for working with the Bullhorn SOAP API. While it was written specifically to work with Rails (3.2+), it is entirely possible that it might work with other Rack-based frameworks.
 
 == Contributing to bullhorn-rails
  
@@ -14,6 +14,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2013 Jack Thorsen. See LICENSE.txt for
+Copyright (c) 2013 Jack Thorsen & Joseph Reeves See LICENSE.txt for
 further details.
  

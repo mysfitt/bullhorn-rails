@@ -1,4 +1,4 @@
-Copyright (c) 2013 Jack Thorsen on behalf of The Atom Group
+Copyright (c) 2013 Jack Thorsen and Joseph Reeves on behalf of The Atom Group
 
 Permission is hereby granted, free of charge, to The Atom Group obtaining
 a copy of this software and associated documentation files (the

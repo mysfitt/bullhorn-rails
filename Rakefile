@@ -17,10 +17,10 @@ Jeweler::Tasks.new do |gem|
   gem.name = "bullhorn-rails"
   gem.homepage = "http://github.com/jthorsen/bullhorn-rails"
   gem.license = "MIT"
-  gem.summary = %Q{Bullhorn API Gem}
-  gem.description = %Q{Bullhorn API gem for a rails environment}
+  gem.summary = %Q{Bullhorn API Gem (SOAP)}
+  gem.description = %Q{Bullhorn SOAP API gem for a rails environment}
   gem.email = "jdt@mind.net"
-  gem.authors = ["Jack Thorsen"]
+  gem.authors = ["Jack Thorsen", "Joseph Reeves"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
