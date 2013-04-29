@@ -39,7 +39,7 @@ module Bullhorn
         response = Bullhorn::Candidates.query_by email
         unless !response.nil? && response.has_key?(:user_id)
           new_candidate = Bullhorn::Candidates.default_candidate
-          response = create_candidate(Bullhorn::Candidates.candidate_create_request(new_candidate, email))
+          response = create_candidate(Bullhorn::Candidates.candidate_create_request(new_candidate))
         end
         response[:user_id]
       end

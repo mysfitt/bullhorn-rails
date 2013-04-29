@@ -99,7 +99,7 @@ module Bullhorn
       }  
       end
 
-      def candidate_create_request dto, email
+      def candidate_create_request dto
         candidate =
         {
           :address => {
@@ -162,7 +162,7 @@ module Bullhorn
           candidate[:userID] = candidate[:user_id]
           candidate[:attributes!][:userID] = {"xsi:type" => "xs:int"}
         else
-          candidate[:username] = email
+          candidate[:username] = @email
           candidate[:password] = "hireminds766"
         end 
         [:"@xmlns:xsi", :"@xmlns:ns4", :"@xsi:type", :alerts, :copy, :category].each do |key|
