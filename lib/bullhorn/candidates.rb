@@ -165,12 +165,12 @@ module Bullhorn
           candidate[:username] = @email
           candidate[:password] = "hireminds766"
         end 
-        [:"@xmlns:xsi", :"@xmlns:ns4", :"@xsi:type", :alerts, :copy, :category].each do |key|
+        [:"@xmlns:xsi", :"@xmlns:ns4", :"@xsi:type", :"alerts", :"copy", :"category"].each do |key|
           candidate.delete(key)
         end
 
         # Camelcase for the SOAP request. Upcase Id to ID
-        candidate = Hash[candidate.map {|k,v| [k.to_s.camelize.sub(/Id/, "ID").to_sym, v]}]
+        candidate = Bullhorn::Util.to_camel candidate
       end
          
       protected
