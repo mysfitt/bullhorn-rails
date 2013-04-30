@@ -74,7 +74,7 @@ module Bullhorn
         :category_id => 45,                            #integer
         :comments => "",   
         :email => "",                         
-        :employee_type => "",
+        :employee_type => "W2",
         :first_name => "",
         :is_deleted => 0,                               #boolean
         :is_editable => 1,         #boolean
@@ -82,8 +82,8 @@ module Bullhorn
         :name => "",
         :owner_id => 43832,               #integer
         :password => "hireminds123",
-        :preferred_contact => "",
-        :status => "",
+        :preferred_contact => "Email",
+        :status => "New Lead",
         :username => "",
         :user_type_id => 35,  
         :is_day_light_savings => true,
