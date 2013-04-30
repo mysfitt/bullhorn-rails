@@ -13,7 +13,7 @@ module Bullhorn
     class << self
       def key_to_camel dto
         # camelcase and symbolize
-        dto = Hash[dto.map {|k,v| [k.to_s.camelize.sub(/Id/, "ID").to_sym, v]}]
+        dto = Hash[dto.map {|k,v| [k.to_s.camelize(:lower).sub(/Id/, "ID").to_sym, v]}]
       end
 
       def key_to_snake dto
