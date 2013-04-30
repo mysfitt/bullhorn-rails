@@ -11,14 +11,22 @@ end
 module Bullhorn
   class Util
     class << self
-      def to_camel dto
+      def key_to_camel dto
         # camelcase and symbolize
         dto = Hash[dto.map {|k,v| [k.to_s.camelize.sub(/Id/, "ID").to_sym, v]}]
       end
 
-      def to_snake dto
+      def key_to_snake dto
         # Snakecase and symbolize
         dto = Hash[dto.map {|k,v| [k.to_s.snakecase.to_sym, v]}]
+      end
+
+      def key_to_string dto
+        dto = Hash[dto.map {|k,v| [k.to_s, v]}]
+      end
+
+      def key_to_symbol dto
+        dto = Hash[dto.map {|k,v| [k.to_sym, v]}]
       end
     end
   end
