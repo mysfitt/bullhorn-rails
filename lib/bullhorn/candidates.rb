@@ -170,7 +170,7 @@ module Bullhorn
         end
 
         # Camelcase for the SOAP request. Upcase Id to ID
-        candidate = Bullhorn::Util.to_camel candidate
+        candidate = Bullhorn::Util.key_to_camel candidate
       end
          
       protected
