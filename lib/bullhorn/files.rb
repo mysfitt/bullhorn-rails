@@ -79,7 +79,7 @@ module Bullhorn
         }
         file_by_candidate.each do |key, value|
           if (value.class != HashWithIndifferentAccess)
-            candidate[key.camelize(:lower).to_sym] = value if (value && (value != ""))
+            candidate[key.to_s.camelize(:lower).to_sym] = value if (value && (value != ""))
           else
             value.each do |k, v|
               candidate[key.to_sym][k.to_sym] = v if (v != (nil || "" || " ")) 
