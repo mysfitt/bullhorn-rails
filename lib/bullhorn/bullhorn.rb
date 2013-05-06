@@ -14,6 +14,8 @@ require 'bullhorn/api'
 module Bullhorn
 
   Savon.configure do |config|
+    # In a Rails application you might want Savon to use the Rails logger.
+    config.logger = Rails.logger
     rails_env = "development"
     ENV["RAILS_ENV"] ||= Rails.env if defined?(Rails)
     rails_env = ENV["RAILS_ENV"] if ENV["RAILS_ENV"]
@@ -21,8 +23,6 @@ module Bullhorn
       # log at debug level only in development.
       # The default log level used by Savon is :debug.
       config.log_level = :debug
-      # In a Rails application you might want Savon to use the Rails logger.
-      config.logger = Rails.logger
 
       # The XML logged by Savon can be formatted for debugging purposes.
       # Unfortunately, this feature comes with a performance and is not
@@ -30,7 +30,7 @@ module Bullhorn
       config.pretty_print_xml = true
     else
       # be quiet(ish) in production
-      config.log_level = :info
+      config.log_level = :error
     end
   end
 end
