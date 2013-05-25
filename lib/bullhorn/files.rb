@@ -154,7 +154,7 @@ module Bullhorn
       end
       
       def file_request file, entity_name="Candidate", entity_id=114755
-        file_type, subtype = file[:content_type].split('/')
+        file_type, subtype = file[:content_type].to_s.split('/')
         {          
           :fileMetaData => {
             :comments => "Uploaded file",
