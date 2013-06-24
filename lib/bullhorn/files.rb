@@ -154,9 +154,6 @@ module Bullhorn
       end
       
       def file_request file, entity_name="Candidate", entity_id=114755
-        puts "*" * 50
-        puts "FILE"
-        puts file.to_json
         file_type, subtype = file[:content_type].to_s.split('/')
         {          
           :fileMetaData => {
