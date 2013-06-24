@@ -73,7 +73,7 @@ module Bullhorn
           :subscriptionId => "JobOrderEvent",
           :criteria => {
               :entityNames => "JobOrder",
-              :entityEventTypes => "INSERTED,UPDATED,DELETED"
+              :entityEventTypes => ["INSERTED","UPDATED","DELETED"]
             },
           :attributes! => {
               :criteria => {
