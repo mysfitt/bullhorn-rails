@@ -64,7 +64,7 @@ module Bullhorn
       def get_events_request
         {
           :subscriptionId => "JobOrderEvent",
-          :max_events => 2
+          :max_events => 20
         }
       end  
       
