@@ -63,14 +63,14 @@ module Bullhorn
       
       def get_events_request
         {
-          :subscriptionId => "JobOrderEventAllEvents",
+          :subscriptionId => "JobOrderEvent",
           :max_events => 2
         }
       end  
       
       def subscribe_request
         {
-          :subscriptionId => "JobOrderEventAllEvents",
+          :subscriptionId => "JobOrderEvent",
           :criteria => {
               :entityNames => "JobOrder",
               :entityEventTypes => ["INSERTED","UPDATED","DELETED"]
@@ -87,7 +87,7 @@ module Bullhorn
       
       def unsubscribe_request
         {
-          :subscriptionId => "JobOrderEventAllEvents"
+          :subscriptionId => "JobOrderEvent"
         }
       end
       
