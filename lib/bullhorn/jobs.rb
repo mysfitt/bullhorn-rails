@@ -11,6 +11,12 @@ module Bullhorn
         get_jobs_from ids
       end
       
+      def all_open_or_closed
+        response = Bullhorn::Client.query all_jobs_query
+        ids = get_ids_from response
+        get_jobs_from ids
+      end
+      
       # Get Job Description Array from Id Array 
       def fetch_job_descriptions job_ids
         get_jobs_from job_ids
@@ -47,6 +53,10 @@ module Bullhorn
       end  
 
       protected
+      
+      def all_jobs_query
+        { :query => { :entityName => "JobOrder" } }
+      end
 
       def open_approved_job_id_request 
         { :query => { :entityName => "JobOrder", :where => "isOpen=1 AND isPublic=1 AND (status='Accepting Candidates' OR status='Website Only')"} }
