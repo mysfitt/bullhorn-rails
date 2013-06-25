@@ -11,8 +11,8 @@ module Bullhorn
         get_jobs_from ids
       end
       
-      def all_open_or_closed
-        response = Bullhorn::Client.query all_jobs_query
+      def all_where where
+        response = Bullhorn::Client.query where
         ids = get_ids_from response
         get_jobs_from ids
       end
@@ -55,7 +55,7 @@ module Bullhorn
       protected
       
       def all_jobs_query
-        { :query => { :entityName => "JobOrder", :where => "dateAdded >= '#{1.year.ago.to_formatted_s(:db)}'" } }
+        { :query => { :entityName => "JobOrder", :where => "(dateAdded >= '#{1.year.ago.to_formatted_s(:db)}' OR isOpen=1)" } }
       end
 
       def open_approved_job_id_request 
