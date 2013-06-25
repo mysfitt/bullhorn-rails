@@ -55,7 +55,7 @@ module Bullhorn
       protected
       
       def all_jobs_query
-        { :query => { :entityName => "JobOrder", :where => "dateAdded >= #{1.year.ago..strftime('%Y-%m-%d')}" } }
+        { :query => { :entityName => "JobOrder", :where => "dateAdded >= #{1.year.ago.to_formatted_s(:db)}" } }
       end
 
       def open_approved_job_id_request 
