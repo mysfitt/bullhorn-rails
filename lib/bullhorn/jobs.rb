@@ -11,6 +11,12 @@ module Bullhorn
         get_jobs_from ids
       end
       
+      def all_where where
+        response = Bullhorn::Client.query where
+        ids = get_ids_from response
+        get_jobs_from ids
+      end
+      
       # Get Job Description Array from Id Array 
       def fetch_job_descriptions job_ids
         get_jobs_from job_ids
@@ -47,6 +53,10 @@ module Bullhorn
       end  
 
       protected
+      
+      def all_jobs_query
+        { :query => { :entityName => "JobOrder", :where => "(dateAdded >= '#{1.year.ago.to_formatted_s(:db)}' OR isOpen=1)" } }
+      end
 
       def open_approved_job_id_request 
         { :query => { :entityName => "JobOrder", :where => "isOpen=1 AND isPublic=1 AND (status='Accepting Candidates' OR status='Website Only')"} }
@@ -63,17 +73,17 @@ module Bullhorn
       
       def get_events_request
         {
-          :subscriptionId => "JobOrderEvent",
-          :max_events => 2
+          :subscriptionId => "JobOrderEventAllEvents",
+          :max_events => 20
         }
       end  
       
       def subscribe_request
         {
-          :subscriptionId => "JobOrderEvent",
+          :subscriptionId => "JobOrderEventAllEvents",
           :criteria => {
               :entityNames => "JobOrder",
-              :entityEventTypes => "INSERTED"
+              :entityEventTypes => ["INSERTED","UPDATED","DELETED"]
             },
           :attributes! => {
               :criteria => {
@@ -87,7 +97,7 @@ module Bullhorn
       
       def unsubscribe_request
         {
-          :subscriptionId => "JobOrderEvent"
+          :subscriptionId => "JobOrderEventAllEvents"
         }
       end
       
